@@ -24,7 +24,7 @@ export const useConversationStore = create<ConversationState>()(
     (set, get) => ({
       conversations: [],
       currentConversationId: null,
-      
+
       addConversation: (conversation) => {
         const id = `conv_${Date.now()}`;
         set((state) => ({
@@ -36,7 +36,7 @@ export const useConversationStore = create<ConversationState>()(
         }));
         return id;
       },
-      
+
       updateConversation: (id, data) => {
         set((state) => ({
           conversations: state.conversations.map((conv) =>
@@ -46,29 +46,29 @@ export const useConversationStore = create<ConversationState>()(
           )
         }));
       },
-      
+
       removeConversation: (id) => {
         try {
           // 检查是否是最后一个对话
           const isLastConversation = get().conversations.length <= 1;
           const isCurrentConversation = get().currentConversationId === id;
-          
+
           // 直接删除（不使用返回对象的方式）
           if (isLastConversation) {
             // 如果是最后一个对话，直接设置空数组和null ID
-            set({ 
-              conversations: [], 
-              currentConversationId: null 
+            set({
+              conversations: [],
+              currentConversationId: null
             });
-            
+
             // 强制再次设置一次，确保状态被更新
             setTimeout(() => {
-              set({ 
-                conversations: [], 
-                currentConversationId: null 
+              set({
+                conversations: [],
+                currentConversationId: null
               });
             }, 10);
-            
+
             // 删除localStorage中的相关内容
             try {
               // 直接从localStorage中删除相关项
@@ -89,12 +89,12 @@ export const useConversationStore = create<ConversationState>()(
             const state = get();
             // 过滤掉要删除的对话
             const newConversations = state.conversations.filter(conv => conv.id !== id);
-            
+
             // 如果删除的是当前对话，则选择第一个作为新的当前对话
             const newCurrentId = isCurrentConversation
               ? (newConversations.length > 0 ? newConversations[0].id : null)
               : state.currentConversationId;
-            
+
             // 设置新状态
             set({
               conversations: newConversations,
@@ -107,23 +107,23 @@ export const useConversationStore = create<ConversationState>()(
           set({ conversations: [], currentConversationId: null });
         }
       },
-      
+
       clearAllConversations: () => {
         try {
           // 直接清空所有对话
-          set({ 
-            conversations: [], 
-            currentConversationId: null 
+          set({
+            conversations: [],
+            currentConversationId: null
           });
-          
+
           // 强制再次设置一次，确保状态被更新
           setTimeout(() => {
-            set({ 
-              conversations: [], 
-              currentConversationId: null 
+            set({
+              conversations: [],
+              currentConversationId: null
             });
           }, 10);
-          
+
           // 删除localStorage中的相关内容
           try {
             // 直接从localStorage中删除相关项
@@ -144,11 +144,11 @@ export const useConversationStore = create<ConversationState>()(
           set({ conversations: [], currentConversationId: null });
         }
       },
-      
+
       setCurrentConversation: (id) => {
         set({ currentConversationId: id });
       },
-      
+
       getConversation: (id) => {
         return get().conversations.find(conv => conv.id === id) || null;
       }
