@@ -1,0 +1,108 @@
+.container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  border-top: 1px solid #f0f0f0;
+  background-color: #fff;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.03);
+  z-index: 100;
+}
+
+.userButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.userButton:hover {
+  background-color: #f5f5f5;
+}
+
+.avatar {
+  background: linear-gradient(45deg, #4a6cf7, #2563eb);
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.userInfo {
+  margin-left: 12px;
+  flex: 1;
+}
+
+.nameAndIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+  margin-right: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.icon {
+  font-size: 12px;
+  color: #999;
+  transition: transform 0.3s;
+}
+
+.iconRotated {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  width: 240px;
+}
+
+.menu {
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.userInfo {
+  padding: 16px;
+  text-align: center;
+}
+
+.largeAvatar {
+  background: linear-gradient(45deg, #4a6cf7, #2563eb);
+  margin-bottom: 12px;
+}
+
+.userName {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.loginButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullWidthButton {
+  width: 100%;
+  text-align: left;
+  height: 40px;
+  border-radius: 6px;
+  transition: all 0.3s;
+  color: #4a6cf7;
+}
+
+.fullWidthButton:hover {
+  background-color: rgba(74, 108, 247, 0.05);
+  color: #2563eb;
+} 

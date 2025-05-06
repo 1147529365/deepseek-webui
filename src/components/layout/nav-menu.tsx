@@ -30,10 +30,10 @@ const menuItems = [
   {
     key: '/workflows',
     icon: <FunctionOutlined />,
-    label: <Link href="/workflows ">COZE插件配置</Link>,
+    label: <Link href="/workflows">COZE插件配置</Link>,
   },
   {
-    key: '/functions',
+    key: '/settings',
     icon: <SettingOutlined />,
     label: <Link href="/settings">设置</Link>,
   },

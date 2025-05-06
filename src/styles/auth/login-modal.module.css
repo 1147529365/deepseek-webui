@@ -1,0 +1,196 @@
+
+
+.modalContent {
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  background-color: white;
+  width: 100vw;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+  background: linear-gradient(45deg, #4a6cf7, #2563eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+}
+
+.form {
+  margin-top: 24px;
+}
+
+.formItem {
+  margin-bottom: 24px;
+}
+
+.inputWrapper {
+  padding: 12px 16px;
+  border-radius: 8px;
+  height: 48px;
+  transition: all 0.3s;
+  border-color: #e6e6e6;
+}
+
+.inputWrapper:hover {
+  border-color: #4a6cf7;
+}
+
+.inputWrapper:focus {
+  border-color: #4a6cf7;
+  box-shadow: 0 0 0 2px rgba(74, 108, 247, 0.2);
+}
+
+.inputIcon {
+  color: #999;
+  margin-right: 8px;
+}
+
+.passwordInput {
+  padding: 12px 16px;
+  border-radius: 8px;
+  height: 48px;
+  transition: all 0.3s;
+  border-color: #e6e6e6;
+}
+
+.passwordInput:hover {
+  border-color: #4a6cf7;
+}
+
+.passwordInput:focus {
+  border-color: #4a6cf7;
+  box-shadow: 0 0 0 2px rgba(74, 108, 247, 0.2);
+}
+
+.forgotPassword {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.forgotPassword a {
+  color: #666;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.forgotPassword a:hover {
+  color: #4a6cf7;
+}
+
+.submitButton {
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #4a6cf7, #2563eb);
+  border: none;
+  transition: all 0.3s;
+}
+
+.submitButton:hover {
+  background: linear-gradient(45deg, #2563eb, #4a6cf7);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 108, 247, 0.3);
+}
+
+.otherLoginOptions {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.otherLoginText {
+  color: #999;
+  margin-bottom: 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otherLoginText::before,
+.otherLoginText::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid #eee;
+  margin: 0 16px;
+}
+
+.loginMethodButtons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.loginMethodButton {
+  border: 1px solid #eee;
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  color: #333;
+}
+
+.loginMethodButton:hover {
+  border-color: #4a6cf7;
+  color: #4a6cf7;
+}
+
+.disabledButton {
+  opacity: 0.6;
+  cursor: not-allowed;
+  border-color: #eee !important;
+  color: #999 !important;
+  background-color: #f9f9f9;
+}
+
+.disabledButton:hover {
+  border-color: #eee !important;
+  color: #999 !important;
+  background-color: #f5f5f5;
+}
+
+.footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  line-height: 1.8;
+}
+
+.footer a {
+  color: #4a6cf7;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.tabsNav {
+  margin-bottom: 24px;
+}
+
+.tab {
+  padding: 12px 16px;
+  font-size: 16px;
+} 

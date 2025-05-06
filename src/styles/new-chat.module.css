@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 650px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  background: linear-gradient(45deg, #4a6cf7, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.textarea {
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  resize: none;
+  border-color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.textarea:hover, .textarea:focus {
+  border-color: #4a6cf7;
+  box-shadow: 0 0 0 2px rgba(74, 108, 247, 0.1);
+}
+
+.button {
+  height: 48px;
+  font-size: 16px;
+  background: linear-gradient(45deg, #4a6cf7, #2563eb);
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 108, 247, 0.25);
+  background: linear-gradient(45deg, #2563eb, #4a6cf7);
+}
+
+.button:disabled {
+  background: #e0e0e0;
+  color: #999;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .card {
+    padding: 24px;
+    margin: 0 16px;
+  }
+  
+  .title {
+    font-size: 22px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+  }
+} 

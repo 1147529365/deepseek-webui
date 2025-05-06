@@ -1,10 +1,8 @@
-
 export interface Message {
-  role: 'system' | 'user' | 'assistant' | 'tool';
-  reasoning_content?: string;
+  role: 'user' | 'assistant' | 'system';
   content: string;
   timestamp: number;
-  tool_call_id?: string;
+  reasoning_content?: string;
 }
 
 export interface FunctionParameter {
@@ -42,4 +40,15 @@ export interface ChatSettings {
   systemPrompt: string;
   model: 'chat' | 'coder';
   functions: FunctionDefinition[];
+}
+
+export interface ChatFunction {
+  id: string;
+  name: string;
+  description: string;
+  parameters: Record<string, any>;
+  required_params: string[];
+  url: string;
+  method: 'GET' | 'POST';
+  headers: Record<string, string>;
 } 
